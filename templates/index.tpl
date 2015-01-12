@@ -38,10 +38,10 @@ function provision(name) {
 
 <table class="info">
 <thead>
-<td width=2%>Ext</td>
-<td width=16%>Displayed CallerID</td>
-<td width=20%>Full name of user</td>
-<td width=18%>Context</td>
+<td width="2%">Ext</td>
+<td width="16%">Displayed CallerID</td>
+<td width="20%">Full name of user</td>
+<td width="18%">Context</td>
 <td>AccountCode</td>
 <td>Address</td>
 <td>Location</td>
