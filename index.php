@@ -25,8 +25,10 @@ $rows = array();
 while ( $row = $sth->fetch() )
 {
     $row['location'] = ip2location($row['ipaddr']);
-    preg_match('/^sip:\d{3,4}@(\d*\.\d*\.\d*.\d*)/', $row['fullcontact'], $m);
-    $row['interip'] = ($m[1]==$row['ipaddr']) ? '' : $m[1];
+    if ( preg_match('/^sip:.+@(\d+\.\d+\.\d+.\d+)/', $row['fullcontact'], $m) ) 
+        $row['interip'] = ($m[1]==$row['ipaddr']) ? '' : $m[1];
+    else
+        $row['interip'] = '';
     $rows[] = $row;
 }
 
