@@ -4,6 +4,7 @@ require('auth.php');
 require('adminaccess.php');
 
 $smarty->assign('section',$_GET['s']);
+$smarty->assign('reserved', 0);
 
 switch($_GET['s'])
 {
